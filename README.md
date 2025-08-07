@@ -1,6 +1,5 @@
 # action-pint
 
-[![Test](https://github.com/MikeWhileCoding/action-pint/workflows/Test/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3ATest)
 [![reviewdog](https://github.com/MikeWhileCoding/action-pint/workflows/reviewdog/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Areviewdog)
 [![depup](https://github.com/MikeWhileCoding/action-pint/workflows/depup/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Adepup)
 [![release](https://github.com/MikeWhileCoding/action-pint/workflows/release/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Arelease)
