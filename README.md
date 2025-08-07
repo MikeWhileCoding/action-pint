@@ -3,7 +3,7 @@
 [![reviewdog](https://github.com/MikeWhileCoding/action-pint/workflows/reviewdog/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Areviewdog)
 [![depup](https://github.com/MikeWhileCoding/action-pint/workflows/depup/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Adepup)
 [![release](https://github.com/MikeWhileCoding/action-pint/workflows/release/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Arelease)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/YOUR_NAME/action-pint?logo=github&sort=semver)](https://github.com/YOUR_NAME/action-pint/releases)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/MikeWhileCoding/action-pint?logo=github&sort=semver)](https://github.com/MikeWhileCoding/action-pint/releases)
 [![action-bumpr supported](https://img.shields.io/badge/bumpr-supported-ff69b4?logo=github&link=https://github.com/haya14busa/action-bumpr)](https://github.com/haya14busa/action-bumpr)
 
 ![github-pr-review demo](https://user-images.githubusercontent.com/3797062/73162963-4b8e2b00-4132-11ea-9a3f-f9c6f624c79f.png)
