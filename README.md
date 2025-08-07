@@ -1,29 +1,19 @@
-# action-template
+# action-pint
 
-<!-- TODO: replace reviewdog/action-template with your repo name -->
-[![Test](https://github.com/reviewdog/action-template/workflows/Test/badge.svg)](https://github.com/reviewdog/action-template/actions?query=workflow%3ATest)
-[![reviewdog](https://github.com/reviewdog/action-template/workflows/reviewdog/badge.svg)](https://github.com/reviewdog/action-template/actions?query=workflow%3Areviewdog)
-[![depup](https://github.com/reviewdog/action-template/workflows/depup/badge.svg)](https://github.com/reviewdog/action-template/actions?query=workflow%3Adepup)
-[![release](https://github.com/reviewdog/action-template/workflows/release/badge.svg)](https://github.com/reviewdog/action-template/actions?query=workflow%3Arelease)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/reviewdog/action-template?logo=github&sort=semver)](https://github.com/reviewdog/action-template/releases)
+[![Test](https://github.com/MikeWhileCoding/action-pint/workflows/Test/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3ATest)
+[![reviewdog](https://github.com/MikeWhileCoding/action-pint/workflows/reviewdog/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Areviewdog)
+[![depup](https://github.com/MikeWhileCoding/action-pint/workflows/depup/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Adepup)
+[![release](https://github.com/MikeWhileCoding/action-pint/workflows/release/badge.svg)](https://github.com/MikeWhileCoding/action-pint/actions?query=workflow%3Arelease)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/YOUR_NAME/action-pint?logo=github&sort=semver)](https://github.com/YOUR_NAME/action-pint/releases)
 [![action-bumpr supported](https://img.shields.io/badge/bumpr-supported-ff69b4?logo=github&link=https://github.com/haya14busa/action-bumpr)](https://github.com/haya14busa/action-bumpr)
 
 ![github-pr-review demo](https://user-images.githubusercontent.com/3797062/73162963-4b8e2b00-4132-11ea-9a3f-f9c6f624c79f.png)
 ![github-pr-check demo](https://user-images.githubusercontent.com/3797062/73163032-70829e00-4132-11ea-8481-f213a37db354.png)
 
-This is a template repository for [reviewdog](https://github.com/reviewdog/reviewdog) action with release automation.
-Click `Use this template` button to create your reviewdog action :dog:!
-
-If you want to create your own reviewdog action from scratch without using this
-template, please check and copy release automation flow.
-It's important to manage release workflow and sync reviewdog version for all
-reviewdog actions.
-
-This repo contains a sample action to run [misspell](https://github.com/client9/misspell).
+This action runs [pint](https://github.com/laravel/pint) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve code review experience.
 
 ## Input
 
-<!-- TODO: update -->
 ```yaml
 inputs:
   github_token:
@@ -53,32 +43,27 @@ inputs:
   reviewdog_flags:
     description: 'Additional reviewdog flags'
     default: ''
-  ### Flags for <linter-name> ###
-  locale:
-    description: '-locale flag of misspell. (US/UK)'
-    default: ''
+  ### Flags for pint ###
+  pint_flags:
+    description: 'Additional pint flags'
+    default: '--test'
 ```
 
 ## Usage
-<!-- TODO: update. replace `template` with the linter name -->
 
 ```yaml
 name: reviewdog
 on: [pull_request]
 jobs:
-  # TODO: change `linter_name`.
-  linter_name:
-    name: runner / <linter-name>
+  pint:
+    name: runner / pint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: reviewdog/action-template@c0a1d65401d8e3c97336c75bb4b6f85677e8f27f # v1.20.0
+      - uses: actions/checkout@v4
+      - uses: YOUR_NAME/action-pint@v1
         with:
           github_token: ${{ secrets.github_token }}
-          # Change reviewdog reporter if you need [github-pr-check,github-check,github-pr-review].
           reporter: github-pr-review
-          # Change reporter level if you need.
-          # GitHub Status Check won't become failure with warning.
           level: warning
 ```
 
