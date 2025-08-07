@@ -56,9 +56,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: YOUR_NAME/action-pint@v1
+      - uses: MikeWhileCoding/action-pint@v1
         with:
           github_token: ${{ secrets.github_token }}
-          reporter: github-pr-review
+          reporter: github-pr-check
           level: warning
 ```
