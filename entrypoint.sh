@@ -8,9 +8,9 @@ fi
 
 export REVIEWDOG_GITHUB_API_TOKEN="${INPUT_GITHUB_TOKEN}"
 
-misspell -locale="${INPUT_LOCALE}" . \
-  | reviewdog -efm="%f:%l:%c: %m" \
-      -name="linter-name (misspell)" \
+pint ${INPUT_PINT_FLAGS} --format=json . \
+  | reviewdog -f=rdjson \
+      -name="pint" \
       -reporter="${INPUT_REPORTER:-github-pr-check}" \
       -filter-mode="${INPUT_FILTER_MODE}" \
       -fail-level="${INPUT_FAIL_LEVEL}" \
